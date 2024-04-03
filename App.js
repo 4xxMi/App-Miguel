@@ -20,7 +20,7 @@ export default function App() {
 
   const onReset = () => {
     setShowAppOptions(false);
-  }
+  };
 
   const onAddSticker = () => {
     setIsModalVisible(true);
@@ -49,6 +49,7 @@ export default function App() {
   };
 
   return (
+    <GestureHandlerRootView style={styles.container}>
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <ImageViewer placeholderImageSource={PlaceholderImage} selectedImage={selectedImage} />
@@ -73,6 +74,7 @@ export default function App() {
       </EmojiPicker>
       <StatusBar style="auto" />
     </View>
+    </GestureHandlerRootView>
   );
 }
 
